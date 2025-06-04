@@ -28,6 +28,13 @@ SpendViz is a modern, browser-based personal finance application for tracking ac
 npm install
 ```
 
+### Environment Variables
+Create a `.env` file in the project root with the following content:
+```
+JWT_SECRET=your_super_secret_jwt_key_here
+```
+Replace `your_super_secret_jwt_key_here` with a strong, unique secret.
+
 ### Running the App (Dev Mode)
 ```bash
 # Start backend (API server)
