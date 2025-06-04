@@ -1,0 +1,12 @@
+services:
+  spendviz:
+    image: spendviz:latest
+    container_name: spendviz
+    ports:
+      - "5174:5174"
+    volumes:
+      - ./spendviz.multi-user.sqlite3:/app/spendviz.multi-user.sqlite3
+      - ./backup:/app/backup
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

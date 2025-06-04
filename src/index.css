@@ -1,0 +1,126 @@
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Inter', 'Noto Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: #f7fafc;
+    color-scheme: light;
+    --radius: 0.625rem;
+    --background: 210 60% 98%; /* hsl(210, 60%, 98%) ~ #f7fafc */
+    --foreground: 220 14% 13%; /* hsl(220, 14%, 13%) ~ #1a202c */
+    --card: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --card-foreground: 220 14% 13%; /* hsl(220, 14%, 13%) ~ #1a202c */
+    --popover: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --popover-foreground: 220 9% 13%; /* hsl(220, 9%, 13%) ~ #222 */
+    --primary: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+    --primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --secondary: 220 14% 94%; /* hsl(220, 14%, 94%) ~ #e5e7eb */
+    --secondary-foreground: 220 14% 13%; /* hsl(220, 14%, 13%) ~ #1a202c */
+    --muted: 210 20% 98%; /* hsl(210, 20%, 98%) ~ #f1f5f9 */
+    --muted-foreground: 222 22% 56%; /* hsl(222, 22%, 56%) ~ #64748b */
+    --accent: 214 32% 90%; /* hsl(214, 32%, 90%) ~ #e0e7ef */
+    --accent-foreground: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+    --destructive: 0 84% 60%; /* hsl(0, 84%, 60%) ~ #ef4444 */
+    --destructive-hover: 0 84% 40%; /* hsl(0, 84%, 40%) ~ #b91c1c */
+    --success: 142 71% 45%; /* hsl(142, 71%, 45%) ~ #22c55e */
+    --border: 210 36% 86%; /* hsl(210, 36%, 86%) ~ #cbd5e1 */
+    --input: 220 14% 94%; /* hsl(220, 14%, 94%) ~ #e5e7eb */
+    --select-border: 210 36% 86%; /* hsl(210, 36%, 86%) ~ #cbd5e1 */
+    --ring: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+    --chart-1: 32 94% 62%;   /* hsl(32, 94%, 62%) ~ #f59e42 */
+    --chart-2: 217 91% 60%;  /* hsl(217, 91%, 60%) ~ #3b82f6 */
+    --chart-3: 241 79% 66%;  /* hsl(241, 79%, 66%) ~ #6366f1 */
+    --chart-4: 184 71% 56%;  /* hsl(184, 71%, 56%) ~ #22d3ee */
+    --chart-5: 326 87% 72%;  /* hsl(326, 87%, 72%) ~ #f472b6 */
+    /* Chart colors - Light Mode */
+    --chart-bg: 0 0% 100%; /* white */
+    --chart-fg: 220 14% 13%; /* dark gray */
+    --chart-text: 220 14% 13%;
+    --chart-grid: 220 14% 94%;
+    --tooltip-bg: 0 0% 100%;
+    --tooltip-fg: 220 14% 13%;
+    --tooltip-border: 220 14% 94%;
+    --sidebar: 210 60% 98%; /* hsl(210, 60%, 98%) ~ #f7fafc */
+    --sidebar-foreground: 220 14% 13%; /* hsl(220, 14%, 13%) ~ #1a202c */
+    --sidebar-primary: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+    --sidebar-primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --sidebar-accent: 221 39% 30%; /* hsl(221, 39%, 30%) ~ #314d68 */
+    --sidebar-accent-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --sidebar-active: 221 83% 95%; /* hsl(221, 83%, 95%) ~ #eaf2fd */
+    --sidebar-active-foreground: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+    --sidebar-border: 210 36% 86%; /* hsl(210, 36%, 86%) ~ #cbd5e1 */
+    --sidebar-ring: 221 83% 53%; /* hsl(221, 83%, 53%) ~ #2563eb */
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 230 13% 12%; /* hsl(230, 13%, 12%) ~ #181a20 */
+    --foreground: 220 14% 96%; /* hsl(220, 14%, 96%) ~ #f3f4f6 */
+    --card: 240 6% 12%; /* hsl(240, 6%, 12%) ~ #1c1f26 */
+    --card-foreground: 220 14% 98%; /* hsl(220, 14%, 98%) ~ #f8f9fa */
+    --popover: 240 6% 15%; /* hsl(240, 6%, 15%) ~ #23272f */
+    --popover-foreground: 220 14% 96%; /* hsl(220, 14%, 96%) ~ #f3f4f6 */
+    --primary: 213 94% 68%; /* hsl(213, 94%, 68%) ~ #60a5fa */
+    --primary-foreground: 230 13% 12%; /* hsl(230, 13%, 12%) ~ #181a20 */
+    --secondary: 240 6% 15%; /* hsl(240, 6%, 15%) ~ #23272f */
+    --secondary-foreground: 220 14% 96%; /* hsl(220, 14%, 96%) ~ #f3f4f6 */
+    --muted: 220 7% 22%; /* hsl(220, 7%, 22%) ~ #2c3038 */
+    --muted-foreground: 240 5% 70%; /* hsl(240, 5%, 70%) ~ #a1a1aa */
+    --accent: 240 6% 15%; /* hsl(240, 6%, 15%) ~ #23272f */
+    --accent-foreground: 213 94% 68%; /* hsl(213, 94%, 68%) ~ #60a5fa */
+    --destructive: 0 84% 60%; /* hsl(0, 84%, 60%) ~ #ef4444 */
+    --destructive-hover: 0 84% 50%; /* hsl(0, 84%, 50%) ~ #dc2626 */
+    --success: 142 71% 45%; /* hsl(142, 71%, 45%) ~ #22c55e */
+    --border: 222 19% 27%; /* hsl(222, 19%, 27%) ~ #334155 */
+    --input: 220 13% 18%; /* hsl(220, 13%, 18%) ~ #232b39 */
+    --select-border: 222 19% 22%; /* hsl(222, 19%, 22%) ~ #2a3441 (dimmed border) */
+    --ring: 213 94% 68%; /* hsl(213, 94%, 68%) ~ #60a5fa */
+    /* Chart colors - Dark Mode */
+    --chart-bg: 240 6% 15%; /* dark gray */
+    --chart-fg: 220 14% 96%; /* light gray */
+    --chart-text: 220 14% 96%;
+    --chart-grid: 220 7% 22%;
+    --tooltip-bg: 240 6% 15%;
+    --tooltip-fg: 220 14% 96%;
+    --tooltip-border: 220 7% 22%;
+    /* Sidebar colors - Dark */
+    --sidebar: 220 15% 10%; /* hsl(220, 15%, 10%) ~ #14161a */
+    --sidebar-foreground: 220 14% 96%; /* hsl(220, 14%, 96%) ~ #f3f4f6 */
+    --sidebar-primary: 213 94% 68%; /* hsl(213, 94%, 68%) ~ #60a5fa */
+    --sidebar-primary-foreground: 230 13% 12%; /* hsl(230, 13%, 12%) ~ #181a20 */
+    --sidebar-accent: 217 91% 60%; /* hsl(217, 91%, 60%) ~ #3b82f6 */
+    --sidebar-accent-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) ~ #fff */
+    --sidebar-active: 220 26% 24%; /* hsl(220, 26%, 24%) ~ #26324a */
+    --sidebar-active-foreground: 230 13% 12%; /* hsl(230, 13%, 12%) ~ #181a20 */
+    --sidebar-border: 222 19% 27%; /* hsl(222, 19%, 27%) ~ #334155 */
+    --sidebar-ring: 213 94% 68%; /* hsl(213, 94%, 68%) ~ #60a5fa */
+  }
+}
+
+html,
+body {
+  font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12) !important;
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-label {
+  color: hsl(var(--card-foreground)) !important;
+}
+

@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# SQLite database files (main and temp WAL/SHM)
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Data and temporary files
+uploads/
+test-data/
+source-data/
+playwright-report/
+test-results/
+backup/
+backend/data/generated_test_data.json
+spendviz-image.tar
+
+# Specific files not part of public repo
+CLAUDE.md
+DEPLOYMENT_CHECKLIST.md
+DEPLOYMENT_PLAN.md
+prd.md
+PROGRESS.md
+REMAINING-multiuser-todos.md
+debug-timezone.html
+spendviz.code-workspace
+deploy.sh
+PRODUCTION_SETUP.md
+RENDER_DEPLOYMENT.md
+render.yaml
+summarize_remote_nginx_logs.sh
+
+# Environment variables
+.env
