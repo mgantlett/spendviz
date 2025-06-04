@@ -50,6 +50,29 @@ npm run start:all
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:5174
 
+### Docker/Podman Option
+You can also run SpendViz using Docker or Podman and Docker Compose.
+
+1.  **Build the Docker Image**:
+    ```bash
+    podman build -t spendviz:latest .
+    ```
+    (If using Docker, replace `podman` with `docker`.)
+
+2.  **Run with Podman Compose**:
+    ```bash
+    podman-compose up -d
+    ```
+    (If using Docker Compose, replace `podman-compose` with `docker-compose` or `docker compose`.)
+
+    The application will be accessible at `http://localhost:5174`.
+
+3.  **Stop the Containers**:
+    ```bash
+    podman-compose down
+    ```
+    (If using Docker Compose, replace `podman-compose` with `docker-compose` or `docker compose`.)
+
 ### Demo Data Setup
 For new installations, you can quickly set up a demo user with pre-populated test data.
 
