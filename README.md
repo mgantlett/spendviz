@@ -1,13 +1,13 @@
 # SpendViz: Personal Finance Web App
 
-SpendViz is a modern, browser-based personal finance application for tracking accounts, importing transactions, categorizing spending, and visualizing your net worth over time.
+SpendViz is a modern, browser-based personal finance application for tracking accounts, importing transactions, categorizing spending, and visualizing your spending.
 
 ## Features
 - **Account Management:** Add, edit, and delete financial accounts.
 - **CSV Import:** Import transactions from bank CSVs with flexible column mapping, date format, and debit/credit logic. Duplicate detection and mapping presets per account.
 - **Transaction Management:** View, filter, sort, add, edit, and delete transactions.
 - **Categories & Rules:** Organize spending with customizable categories and powerful categorization rules. Resolve rule conflicts interactively.
-- **Charts & Dashboard:** Visualize your spending by category using pie charts and track spending by category over time (Recharts).
+- **Charts & Dashboard:** Visualize your spending by category using pie chart and track spending by category over time bar chart (Recharts).
 - **Data Storage:** All data is stored locally in SQLite (via better-sqlite3).
 - **Backup/Restore:** App-managed database backups and restore options.
 
