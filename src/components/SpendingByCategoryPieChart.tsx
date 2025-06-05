@@ -179,13 +179,13 @@ export default function SpendingByCategoryPieChart() {
       {error && <div className="text-destructive">{error}</div>}
       {!loading && !error && data.length > 0 && (
         <div className="flex flex-col lg:flex-row gap-4">
-          <div className="flex-1" style={{ minHeight: '450px' }}>
-            <ResponsiveContainer width="100%" height={450}>
+          <div className="flex-1" style={{ minHeight: '400px' }}>
+            <ResponsiveContainer width="100%" height={400}>
               <PieChart>
                 <Pie
                   data={data}
                   cx="50%"
-                  cy="40%"
+                  cy="50%"
                   dataKey="total_spent"
                   nameKey="category_name"
                   innerRadius={0}
